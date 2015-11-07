@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kirby Krash</title>
+    <style>
+      body {
+          margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+
+    <script src="assets/keymaster.js"></script>
+    <script src="lib/vector.js"></script>
+    <script src="lib/vertex.js"></script>
+    <script src="lib/spring.js"></script>
+    <script src="lib/linear_spring.js"></script>
+    <script src="lib/angular_spring.js"></script>
+    <script src="lib/body.js"></script>
+    <script src="lib/sprite.js"></script>
+    <script src="lib/game.js"></script>
+    <script src="lib/game_view.js"></script>
+
+    <script type="text/javascript">
+      var canvas = document.getElementById("game-canvas");
+      var ctx = canvas.getContext('2d');
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+
+      var gameView = new BB.GameView(ctx, canvas.width, canvas.height);
+      gameView.start();
+    </script>
+  </body>
+</html>
